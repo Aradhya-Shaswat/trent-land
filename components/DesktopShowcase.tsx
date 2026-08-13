@@ -226,6 +226,7 @@ export default function DesktopShowcase() {
             }}>
               <div className="showcase w-full" style={{ background: "transparent", border: "0", boxShadow: "none", padding: "0", backdropFilter: "none" }}>
                 
+                
                 {/* Alpha Terminal Header */}
                 <div className="showcase-header" style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "12px", color: "rgba(255,255,255,0.9)", fontSize: "14px", fontWeight: "500" }}>
                   <span>Alpha Terminal</span>
