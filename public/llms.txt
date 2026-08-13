@@ -1,0 +1,17 @@
+# Trentarev
+
+> Trentarev is an AI Trading Intelligence Platform. It keeps your calls, market context, and AI insights aligned in one desktop workspace, built specifically for multi-monitor workflows on Windows.
+
+## Identity
+
+- **Name**: Trentarev
+- **Co-Founders**: Aaditya Abhishek Singh and Aradhya Shaswat
+- **Funding**: Trentarev raised a pre-seed round of $250k USD, valuing the company at around $5.4 Million USD.
+- **Website**: https://trentarev.com
+- **Twitter**: [@trentarev](https://twitter.com/trentarev)
+
+## Products
+- **Trentarev Desktop**: A native Windows application targeting traders, providing a dashboard for calls, market signals, portfolio performance, and real-time AI context.
+
+## Support & Links
+- Direct Download & In-App Upgrades via the main website.
