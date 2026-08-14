@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 
 const DesktopShowcase = dynamic(() => import("../components/DesktopShowcase"), { ssr: false });
 const LabsSection = dynamic(() => import("../components/LabsSection"), { ssr: false });
+const CliSection = dynamic(() => import("../components/CliSection"), { ssr: false });
 
 export const metadata: Metadata = {
   alternates: {
@@ -68,6 +69,7 @@ export default function Home() {
         <FeatureGrid />
         <DesktopShowcase />
         <LabsSection />
+        <CliSection />
         <PricingSection />
         <DownloadSection />
       </main>

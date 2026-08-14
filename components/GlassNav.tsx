@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "/#capabilities", label: "Capabilities" },
   { href: "/#labs", label: "Labs" },
+  { href: "/#cli", label: "CLI" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/resources", label: "Resources" }
 ];
@@ -19,7 +20,7 @@ export default function GlassNav({ alwaysLight = false }: { alwaysLight?: boolea
     if (alwaysLight) return;
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 80);
-      
+
       const terminalSection = document.getElementById("terminal");
       if (terminalSection) {
         const rect = terminalSection.getBoundingClientRect();
@@ -41,7 +42,7 @@ export default function GlassNav({ alwaysLight = false }: { alwaysLight?: boolea
   // When textIsDark is true, we show black text.
   // At the top of the page (not scrolled), we want white text (!isScrolled).
   // Over the dark Desktop Showcase section, we want white text (isOverDark).
-const textIsDark = (isScrolled && !isOverDark) || isMobileMenuOpen;
+  const textIsDark = (isScrolled && !isOverDark) || isMobileMenuOpen;
 
   return (
     <header className="nav-wrap" style={{ position: "fixed", top: 0, width: "100%", zIndex: 50, display: "flex", justifyContent: "center", transition: "all 0.3s ease" }}>
@@ -96,7 +97,7 @@ const textIsDark = (isScrolled && !isOverDark) || isMobileMenuOpen;
           </nav>
 
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <button 
+            <button
               className="menu-toggle"
               style={{
                 flexDirection: "column",
@@ -135,7 +136,7 @@ const textIsDark = (isScrolled && !isOverDark) || isMobileMenuOpen;
               fontFamily: "var(--font-sans)",
               transition: "all 0.3s ease"
             }}
-            className="nav-cta nav-link-hover"
+              className="nav-cta nav-link-hover"
             >Download</a>
           </div>
         </div>
@@ -157,9 +158,9 @@ const textIsDark = (isScrolled && !isOverDark) || isMobileMenuOpen;
         }}>
           <nav style={{ display: "flex", flexDirection: "column", gap: "32px", width: "100%", textAlign: "center" }}>
             {links.map((link) => (
-              <a 
-                key={link.href} 
-                href={link.href} 
+              <a
+                key={link.href}
+                href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 style={{
                   color: "#1c1a18",
@@ -172,8 +173,8 @@ const textIsDark = (isScrolled && !isOverDark) || isMobileMenuOpen;
                 {link.label}
               </a>
             ))}
-            <a 
-              href="/#download" 
+            <a
+              href="/#download"
               onClick={() => setIsMobileMenuOpen(false)}
               style={{
                 background: "#1c1a18",
