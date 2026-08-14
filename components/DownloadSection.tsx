@@ -30,7 +30,7 @@ export default function DownloadSection() {
               border: "1px solid rgba(28,26,24,0.08)",
               boxShadow: "0 4px 12px rgba(0,0,0,0.02)"
             }}>
-              Now Live &bull; Version 1.4.9
+              Now Live &bull; Version 1.5.0
             </span>
             
             <h2 style={{ 
@@ -42,16 +42,7 @@ export default function DownloadSection() {
               margin: 0
             }}>Get Trentarev Desktop</h2>
             
-            <p style={{ 
-              fontFamily: "var(--font-sans)", 
-              fontWeight: 300, 
-              fontSize: "16px", 
-              color: "var(--muted-strong)",
-              margin: 0,
-              maxWidth: "450px"
-            }}>
-              Experience instant AI-powered trading signals, whale wallets monitor, and advanced risk sizing models natively on Windows.
-            </p>
+
 
             <div className="glass" style={{
               width: "100%",
@@ -114,16 +105,7 @@ export default function DownloadSection() {
               </div>
             </div>
 
-            <p style={{
-              fontFamily: "var(--font-sans)",
-              fontWeight: 300,
-              fontSize: "13px",
-              color: "var(--muted-strong)",
-              margin: 0,
-              maxWidth: "400px"
-            }}>
-              *Paid subscriptions (Silver & Gold) can be managed directly in the desktop settings after installation.
-            </p>
+
           </div>
         </Reveal>
       </div>
