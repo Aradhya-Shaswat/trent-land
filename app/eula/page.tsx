@@ -1,0 +1,79 @@
+import GlassNav from "../../components/GlassNav";
+import Footer from "../../components/Footer";
+
+export default function EulaPage() {
+  return (
+    <main style={{ backgroundColor: "#f7f6f3", minHeight: "100vh" }}>
+      <GlassNav alwaysLight />
+      <section className="section" style={{ paddingTop: "180px", paddingBottom: "120px" }}>
+        <div className="section-inner" style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(36px, 5vw, 48px)", fontWeight: 400, letterSpacing: "-0.02em", color: "#1c1a18", marginBottom: "24px" }}>
+            End-User License Agreement (EULA)
+          </h1>
+          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "14px", color: "var(--muted)", marginBottom: "64px" }}>
+            Last updated: August 15, 2026
+          </p>
+          
+          <div style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "15px", lineHeight: "1.8", color: "var(--muted-strong)", display: "flex", flexDirection: "column", gap: "32px" }}>
+            <div>
+              <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>1. License Grant</h2>
+              <p>This End-User License Agreement ("EULA") is a legal agreement between you ("User" or "Licensee") and Trentarev Corporation ("Licensor", "we", "our", or "us"). Subject to your compliance with the terms of this EULA, Trentarev Corporation grants you a revocable, limited, non-exclusive, non-transferable, non-sublicensable license to download, install, and execute the Trentarev desktop application (including Windows installer packages) and the command-line interface (<code>@trentarev/cli</code>) solely for your personal or internal business operations.</p>
+            </div>
+            
+            <div>
+              <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>2. License Restrictions</h2>
+              <p>You agree not to, and you will not permit others to:</p>
+              <ul style={{ paddingLeft: "20px", marginTop: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <li>Decompile, reverse engineer, disassemble, attempt to derive the source code of, or decrypt the native Tauri executable binaries, packages, or background worker services.</li>
+                <li>Modify, adapt, translate, enhance, or create derivative works from the software.</li>
+                <li>Rent, lease, lend, sell, sublicense, assign, distribute, publish, or transfer the software or any portion thereof to any third party.</li>
+                <li>Bypass, disable, or circumvent any licensing keys, digital signatures, subscription validation mechanisms, or API rate limiters.</li>
+                <li>Use the software to build a competitive product, scrap data, or harvest financial indicators for unauthorized commercial resale.</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>3. Ownership & Intellectual Property</h2>
+              <p>The software, user interface layouts, custom indicators, AI signal algorithms, trademarks, and brand assets are the exclusive intellectual property of Trentarev Corporation. This EULA grants you a license to use the software, not a transfer of title or ownership. All rights not expressly granted to you are reserved by Trentarev Corporation.</p>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>4. Automatic Updates & Telemetry</h2>
+              <p>The software may automatically communicate with Trentarev update servers (e.g., <code>releases.trentarev.com</code>) to check for software updates, security patches, and structural enhancements. You consent to the automatic download and installation of these updates. The software may also collect anonymized technical diagnostic metrics and execution crash logs to optimize performance.</p>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>5. Financial Data & AI Inference Disclaimer</h2>
+              <p style={{ fontWeight: "400", color: "#1c1a18" }}>IMPORTANT: THE SOFTWARE AND ALL INCLUDED AI PREDICTIONS, SIGNALS, RISK MODELS, AND WHALE FLOW ANALYTICS ARE FOR INFORMATIONAL AND EDUCATIONAL PURPOSES ONLY.</p>
+              <p style={{ marginTop: "8px" }}>The software does not provide personalized investment advice or trade execution guarantees. You assume full risk and responsibility for any trading or investment decisions made based on outputs generated by the software.</p>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>6. License Termination</h2>
+              <p>This EULA is effective until terminated. Your rights under this license will terminate automatically without notice if you fail to comply with any of its terms. Upon termination, you must cease all use of the software and delete all copies of the application binary files from your devices.</p>
+            </div>
+            
+            <div>
+              <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>7. Limitation of Liability</h2>
+              <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL TRENTAREV CORPORATION BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES (INCLUDING LOSS OF PROFITS, TRADING LOSSES, OR BUSINESS INTERRUPTION) ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE.</p>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>8. Contact Us</h2>
+              <p>If you have any questions regarding this End-User License Agreement, please contact us at:</p>
+              <p style={{ marginTop: "12px" }}><strong>Email:</strong> support@trentarev.com</p>
+              <p><strong>Trentarev Corporation</strong></p>
+            </div>
+          </div>
+
+          <div style={{ marginTop: "64px" }}>
+            <a href="/" className="inline-flex items-center gap-2 font-sans text-sm font-normal text-[#1c1a18] no-underline border-b border-[#1c1a18]/20 pb-[2px] transition-colors duration-200 hover:border-[#1c1a18]">
+              &larr; Back to Home
+            </a>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </main>
+  );
+}

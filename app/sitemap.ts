@@ -48,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: 'https://trentarev.com/eula',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
       url: 'https://trentarev.com/llms.txt',
       lastModified: new Date(),
       changeFrequency: 'monthly',

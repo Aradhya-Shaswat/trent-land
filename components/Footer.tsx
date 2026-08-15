@@ -95,6 +95,7 @@ export default function Footer() {
               <strong className="text-[14px] font-semibold text-white mb-2">Legal & Resources</strong>
               <a href="/privacy" className="text-white/75 text-[13px] hover:text-white transition-colors">Privacy Policy</a>
               <a href="/terms" className="text-white/75 text-[13px] hover:text-white transition-colors">Terms of Service</a>
+              <a href="/eula" className="text-white/75 text-[13px] hover:text-white transition-colors">EULA</a>
               <a href="/resources" className="text-white/75 text-[13px] hover:text-white transition-colors">Resources</a>
               <a href="/docs" className="text-white/75 text-[13px] hover:text-white transition-colors">Documentation</a>
             </div>
