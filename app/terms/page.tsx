@@ -11,18 +11,18 @@ export default function TermsPage() {
             Terms of Service
           </h1>
           <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "14px", color: "var(--muted)", marginBottom: "64px" }}>
-            Last updated: August 13, 2026
+            Last updated: August 15, 2026
           </p>
           
           <div style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "15px", lineHeight: "1.8", color: "var(--muted-strong)", display: "flex", flexDirection: "column", gap: "32px" }}>
             <div>
               <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>1. Agreement to Terms</h2>
-              <p>By accessing or using the website (trentarev.com), the client portal (app.trentarev.com), or downloading the native Trentarev desktop application on Windows, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you are not granted permission to access or use our services.</p>
+              <p>By accessing or using the website (trentarev.com), the client portal (app.trentarev.com), downloading the native Trentarev desktop application on Windows, or installing the command-line interface (<code>@trentarev/cli</code>), you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you are not granted permission to access or use our services.</p>
             </div>
             
             <div>
               <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>2. Description of Services</h2>
-              <p>Trentarev provides a native Windows desktop application and web endpoints delivering trading intelligence tools, including:</p>
+              <p>Trentarev provides a native Windows desktop application, a command-line interface (<code>@trentarev/cli</code>), and web endpoints delivering trading intelligence tools, including:</p>
               <ul style={{ paddingLeft: "20px", marginTop: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
                 <li>AI-powered market signals and stock predictions.</li>
                 <li>Custom options strategy, pattern recognition, and risk sizing models.</li>
@@ -53,10 +53,10 @@ export default function TermsPage() {
 
             <div>
               <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>5. User Accounts & Security</h2>
-              <p>To use our desktop application and synchronized features, you must maintain a secure account managed by Clerk Inc. You agree to:</p>
+              <p>To use our desktop application, command-line interface (<code>@trentarev/cli</code>), and synchronized features, you must maintain a secure account managed by Clerk Inc. You agree to:</p>
               <ul style={{ paddingLeft: "20px", marginTop: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
                 <li>Provide accurate, complete registration information.</li>
-                <li>Keep your login credentials secure. Active desktop session tokens remain valid for 90 days. You are fully responsible for all activities that occur under your session token.</li>
+                <li>Keep your login credentials secure. Active desktop and CLI session tokens remain valid for 90 days. You are fully responsible for all activities that occur under your session token.</li>
                 <li>Maintain the secrecy of your bot API keys (if generated). Any unauthorized request signature detected on our servers will result in the immediate revocation of the compromised token.</li>
               </ul>
             </div>
@@ -65,7 +65,7 @@ export default function TermsPage() {
               <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>6. Prohibited Conduct</h2>
               <p>You agree not to engage in any of the following prohibited behaviors:</p>
               <ul style={{ paddingLeft: "20px", marginTop: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <li>Decompiling, reverse engineering, or attempting to extract source code from the native Tauri Windows binary files.</li>
+                <li>Decompiling, reverse engineering, or attempting to extract source code from the native Tauri Windows binary files or the command-line interface packages.</li>
                 <li>Scraping or harvesting market data, news articles, or financial indicators from the API servers.</li>
                 <li>Using scripts or automated bots to request server endpoints in a manner that triggers rate-limiter restrictions (exceeding maximum requests per window limits).</li>
                 <li>Circumventing licensing controls, trial periods, or subscription boundaries.</li>
@@ -74,7 +74,7 @@ export default function TermsPage() {
 
             <div>
               <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>7. Intellectual Property</h2>
-              <p>The service structures, brand assets (logos, styles), custom algorithms, indicators, prediction dataset fingerprints, and original codebase are the exclusive property of Trentarev Corporation and its licensors. You are granted a limited, personal, non-exclusive, non-transferable, and revocable license to execute the desktop client for personal or internal business operations.</p>
+              <p>The service structures, brand assets (logos, styles), custom algorithms, indicators, prediction dataset fingerprints, and original codebase are the exclusive property of Trentarev Corporation and its licensors. You are granted a limited, personal, non-exclusive, non-transferable, and revocable license to execute the desktop client and command-line interface for personal or internal business operations.</p>
             </div>
             
             <div>

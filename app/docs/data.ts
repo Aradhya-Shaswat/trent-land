@@ -117,6 +117,218 @@ Currently, the app assumes a single local user. To permit cloud syncing, we plan
 2. **Row-Level Security:** Migrating \`user_id\` into the indexing strategy.
 3. **Key-Exchange Integration:** GitHub OAuth for minimal friction.
 `
+      },
+      {
+        title: "Command-Line Interface (CLI)",
+        slug: "cli",
+        description: "Complete installation and command reference for the Trentarev terminal client (@trentarev/cli).",
+        content: `
+# Command-Line Interface (CLI)
+
+The official command-line interface for the **Trentarev Financial & AI Intelligence Platform**. Access real-time market signals, AI stock predictions, position risk models, institutional whale flows, trading call logs, and streaming AI assistant directly from your terminal.
+
+## Installation
+
+You can install \`@trentarev/cli\` via single-line install scripts, globally through NPM, or run it directly using \`npx\`.
+
+### Single-Line Installation
+
+#### Windows (PowerShell)
+\`\`\`powershell
+iwr -useb https://api.trentarev.com/install.ps1 | iex
+\`\`\`
+
+#### macOS / Linux
+\`\`\`bash
+curl -fsSL https://api.trentarev.com/install.sh | sh
+\`\`\`
+
+### Global NPM Installation
+\`\`\`bash
+npm install -g @trentarev/cli
+\`\`\`
+
+### Instant NPX Execution
+\`\`\`bash
+npx @trentarev/cli login
+\`\`\`
+
+## Authentication
+
+Before running commands, authenticate your terminal client with your Trentarev account:
+
+\`\`\`bash
+trentarev login
+\`\`\`
+This spins up a local loopback server, opens your web browser for authentication, and saves your session token to \`~/.trentarev/credentials.json\`.
+
+To override the default API server URL during login:
+\`\`\`bash
+trentarev login --server <url>
+\`\`\`
+
+Other authentication commands:
+* **whoami / status:** Display account profile details, active subscription tier, capabilities, and active calls:
+  \`\`\`bash
+  trentarev whoami [--json]
+  \`\`\`
+* **logout:** Revoke session token and clear credentials locally:
+  \`\`\`bash
+  trentarev logout
+  \`\`\`
+
+## Command Reference
+
+### Intelligence & Signals
+
+#### Real-time Signals
+Stream real-time alpha signals, insider flows, and neural signals:
+\`\`\`bash
+trentarev signals [options]
+\`\`\`
+* \`--stream <all|neural|flow|sentiment|sec>\`: Filter by signal stream type.
+* \`-s, --symbol <symbol>\`: Filter signals by a specific stock ticker symbol.
+* \`-c, --min-confidence <number>\`: Filter signals by minimum confidence threshold (0.0 to 1.0).
+* \`-l, --limit <number>\`: Limit the number of returned signals (default: 15).
+* \`--json\`: Output raw data as formatted JSON.
+
+#### AI Stock Predictor
+Generate AI-driven directional predictions, target prices, and key catalysts:
+\`\`\`bash
+trentarev predict <symbol> [options]
+\`\`\`
+* \`-t, --timeframe <horizon>\`: Set time horizon: \`short\` (default), \`medium\`, or \`long\`.
+* \`--json\`: Output prediction data as JSON.
+
+#### AI Position Sizing & Risk Assessment
+Calculate risk metrics and target position sizes for a specific trade setup:
+\`\`\`bash
+trentarev risk <symbol> --entry <price> --target <price> --stop <price> [options]
+\`\`\`
+* \`--entry <price>\`: **(Required)** The planned trade entry price.
+* \`--target <price>\`: **(Required)** The target exit price.
+* \`--stop <price>\`: **(Required)** The stop-loss price.
+* \`--capital <amount>\`: Total portfolio capital allocated (default: 10000).
+* \`--tolerance <level>\`: Set risk tolerance level: \`low\`, \`medium\` (default), or \`high\`.
+* \`--json\`: Output risk assessment metrics as JSON.
+
+---
+
+### Trading Calls Management
+
+Log and manage structural positions (Trading Calls) from your terminal.
+
+#### List Calls
+List all active and historical trading calls:
+\`\`\`bash
+trentarev calls list [--json]
+\`\`\`
+
+#### Log a Call
+Create a new trading position log:
+\`\`\`bash
+trentarev calls create <symbol> --type <buy|sell> --entry <price> --target <price> --stop <price> [options]
+\`\`\`
+* \`--type <buy|sell>\`: **(Required)** Transaction type.
+* \`--entry <price>\`: **(Required)** Entry execution price.
+* \`--target <price>\`: **(Required)** Target limit price.
+* \`--stop <price>\`: **(Required)** Stop-loss execution price.
+* \`--horizon <horizon>\`: Set time horizon: \`SHORT\`, \`MEDIUM\`, or \`LONG\`.
+* \`--reasoning <text>\`: Document your trade thesis/catalyst.
+
+#### Close a Call
+Close an active trade call using its database ID:
+\`\`\`bash
+trentarev calls close <id>
+\`\`\`
+
+---
+
+### Whale & SEC Flow Tracking
+
+#### Institutional Whale Flows
+Track large institutional orders (exceeding $1M+) flowing through public markets:
+\`\`\`bash
+trentarev whales [options]
+\`\`\`
+* \`--type <BUY|SELL|ALL>\`: Filter by trade action direction (default: \`ALL\`).
+* \`-s, --symbol <symbol>\`: Filter transactions by ticker.
+* \`-l, --limit <number>\`: Maximum number of transactions to list (default: 15).
+* \`--json\`: Output transactions as raw JSON.
+
+#### SEC Insider Transactions
+Inspect recent SEC Form 4 filings for company insiders:
+\`\`\`bash
+trentarev sec [options]
+\`\`\`
+* \`-t, --tickers <symbols>\`: Comma-separated list of stock tickers (e.g., \`AAPL,NVDA\`).
+* \`-l, --limit <number>\`: Limit transactions list size (default: 10).
+* \`--json\`: Output raw data as JSON.
+
+---
+
+### Market Data & Fundamentals
+
+Quickly inspect market prices, fundamental ratios, and news from terminal:
+* **Live Quotes:** Get real-time stock prices and daily statistics:
+  \`\`\`bash
+  trentarev quote <symbol> [--json]
+  \`\`\`
+* **Financial Fundamentals:** Inspect P/E, EPS, market capitalization, and annual revenues:
+  \`\`\`bash
+  trentarev fundamentals <symbol> [--json]
+  \`\`\`
+* **Company News Feed:** Fetch recent news headers and sentiment details:
+  \`\`\`bash
+  trentarev news <symbol> [--json]
+  \`\`\`
+
+---
+
+### Advanced Analysis Suite
+
+Execute advanced strategy backtests, portfolio optimization, options pricing, and chart scans:
+* **Quantitative Backtesting:** Test trading strategies against historical pricing data:
+  \`\`\`bash
+  trentarev backtest [options]
+  \`\`\`
+  * \`-s, --symbol <symbol>\`: Target stock symbol (default: \`NVDA\`).
+  * \`--strategy <name>\`: Strategy model name (default: \`sma_cross\`).
+  * \`--fast <period>\`: Fast Moving Average period (default: \`10\`).
+  * \`--slow <period>\`: Slow Moving Average period (default: \`50\`).
+  * \`--capital <amount>\`: Base starting portfolio capital (default: \`10000\`).
+  * \`--json\`: Output backtest results as JSON.
+* **Portfolio Optimization:** Run AI-powered asset allocation optimization:
+  \`\`\`bash
+  trentarev portfolio --symbols <tickers> [--json]
+  \`\`\`
+* **Options Recommendations:** Retrieve options strategy suggestions based on implied volatility and underlying trend:
+  \`\`\`bash
+  trentarev options <symbol> [--json]
+  \`\`\`
+* **Neural Chart Scan:** Scan chart patterns and identify technical setups:
+  \`\`\`bash
+  trentarev pattern <symbol> [options]
+  \`\`\`
+  * \`-t, --timeframe <tf>\`: Scanning timeframe: \`1D\` (default), \`4H\`, or \`1H\`.
+  * \`--json\`: Output pattern data as JSON.
+
+---
+
+### Terminal AI Assistant REPL
+
+Engage directly with the Trentarev AI streaming engine within your terminal:
+\`\`\`bash
+trentarev chat
+\`\`\`
+This spawns an interactive REPL environment that handles streaming responses to your quantitative, macro, and ticker-specific queries.
+
+## Security & Configuration
+
+* **Local Storage:** All credentials and session tokens are strictly stored locally in \`~/.trentarev/credentials.json\`.
+* **File Permissions:** On UNIX-based filesystems, the credentials file is written with strict \`0600\` (read/write owner only) permissions.
+* **Session Lifecycle:** Active session tokens remain valid for 90 days. Logging out via \`trentarev logout\` immediately revokes the session on the auth server and deletes the local credentials file.
+`
       }
     ]
   },

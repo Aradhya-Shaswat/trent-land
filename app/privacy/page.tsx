@@ -11,13 +11,13 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "14px", color: "var(--muted)", marginBottom: "64px" }}>
-            Last updated: August 13, 2026
+            Last updated: August 15, 2026
           </p>
           
           <div style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "15px", lineHeight: "1.8", color: "var(--muted-strong)", display: "flex", flexDirection: "column", gap: "32px" }}>
             <div>
               <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>1. Introduction</h2>
-              <p>Welcome to Trentarev Corporation ("we", "our", or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy informs you how we look after your personal data when you visit our website (trentarev.com), access the client portal (app.trentarev.com), or use the native Trentarev desktop application on Windows. It also outlines your privacy rights and how data protection laws protect you.</p>
+              <p>Welcome to Trentarev Corporation ("we", "our", or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy informs you how we look after your personal data when you visit our website (trentarev.com), access the client portal (app.trentarev.com), use the native Trentarev desktop application on Windows, or interact with our command-line interface (<code>@trentarev/cli</code>). It also outlines your privacy rights and how data protection laws protect you.</p>
             </div>
             
             <div>
@@ -41,6 +41,7 @@ export default function PrivacyPage() {
                 <li><code>trentarev:induction_status</code>: A temporary variable tracking the user setup status.</li>
                 <li><code>user:id:v1</code>: An anonymous client identifier used to distinguish sessions.</li>
                 <li><code>@tanstack</code> Persisted Cache: Local query caches that speed up the rendering of financial metrics and historical stock candle charts, stored in session storage.</li>
+                <li><code>~/.trentarev/credentials.json</code>: A secure local JSON file containing your active Clerk session token used by the command-line interface.</li>
               </ul>
             </div>
             
@@ -81,6 +82,11 @@ export default function PrivacyPage() {
                       <td style={{ padding: "12px 8px" }}>United States</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid rgba(28, 26, 24, 0.08)" }}>
+                      <td style={{ padding: "12px 8px", color: "#1c1a18", fontWeight: "400" }}>Railway Corp.</td>
+                      <td style={{ padding: "12px 8px" }}>Cloud hosting infrastructure for the Trentarev backend API server and quantitative backtesting worker engines.</td>
+                      <td style={{ padding: "12px 8px" }}>United States</td>
+                    </tr>
+                    <tr style={{ borderBottom: "1px solid rgba(28, 26, 24, 0.08)" }}>
                       <td style={{ padding: "12px 8px", color: "#1c1a18", fontWeight: "400" }}>Dodo Payments</td>
                       <td style={{ padding: "12px 8px" }}>Billing processing, payment compliance, tax collection, checkout sessions, and subscription webhooks.</td>
                       <td style={{ padding: "12px 8px" }}>Global</td>
@@ -110,7 +116,7 @@ export default function PrivacyPage() {
               <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>6. Data Retention & Expiry</h2>
               <p>We only retain your personal data for as long as necessary to fulfill the purposes we collected it for. The default lifetimes for active session tokens are:</p>
               <ul style={{ paddingLeft: "20px", marginTop: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <li><strong>Desktop Sessions:</strong> Long-lived desktop session tokens expire after 90 days.</li>
+                <li><strong>Desktop & CLI Sessions:</strong> Long-lived desktop and command-line interface session tokens expire after 90 days.</li>
                 <li><strong>Transient Auth Tokens:</strong> Pending login handoff tokens expire after 5 minutes and are deleted immediately upon consumption.</li>
                 <li><strong>Portfolio & Workspace Data:</strong> Persisted inside your database profile until you request account deletion.</li>
               </ul>
@@ -118,7 +124,7 @@ export default function PrivacyPage() {
             
             <div>
               <h2 style={{ fontSize: "20px", fontWeight: 400, color: "#1c1a18", marginBottom: "16px", fontFamily: "var(--font-display)" }}>7. Data Security</h2>
-              <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way. All database queries use secure TLS connections. Portfolios, credentials, and settings transmitted between the Trentarev desktop client and the backend server are protected via HTTPS. The custom <code>trentarev://</code> protocol scheme registered in the Windows registry restricts inputs to prevent execution injection.</p>
+              <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way. All database queries use secure TLS connections. Portfolios, credentials, and settings transmitted between the Trentarev desktop client, command-line interface (<code>@trentarev/cli</code>), and the backend server are protected via HTTPS. The custom <code>trentarev://</code> protocol scheme registered in the Windows registry restricts inputs to prevent execution injection.</p>
             </div>
 
             <div>
