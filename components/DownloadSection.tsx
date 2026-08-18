@@ -31,7 +31,7 @@ export default function DownloadSection() {
               border: "1px solid rgba(28,26,24,0.08)",
               boxShadow: "0 4px 12px rgba(0,0,0,0.02)"
             }}>
-              Now Live &bull; Version 2.0.0
+              Now Live &bull; Version 2.0.1
             </span>
             
             <h2 style={{ 
