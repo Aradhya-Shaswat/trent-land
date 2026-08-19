@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
 
           {/* Footer grids */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-[60px] w-full md:w-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-[60px] w-full md:w-auto">
             {/* Column 1: Contact */}
             <div className="flex flex-col gap-4">
               <strong className="text-[14px] font-semibold text-white mb-2">Contact</strong>
@@ -90,7 +90,15 @@ export default function Footer() {
               <a href="https://instagram.com/trytrentarev" target="_blank" rel="noopener noreferrer" className="text-white/75 text-[13px] hover:text-white transition-colors">Instagram</a>
             </div>
 
-            {/* Column 3: Legal & Resources */}
+            {/* Column 3: Platform */}
+            <div className="flex flex-col gap-4">
+              <strong className="text-[14px] font-semibold text-white mb-2">Platform</strong>
+              <a href="https://releases.trentarev.com" className="text-white/75 text-[13px] hover:text-white transition-colors">Downloads</a>
+              <a href="https://app.trentarev.com" className="text-white/75 text-[13px] hover:text-white transition-colors">Subscription Portal</a>
+              <a href="https://api.trentarev.com/status" className="text-white/75 text-[13px] hover:text-white transition-colors">API Status</a>
+            </div>
+
+            {/* Column 4: Legal & Resources */}
             <div className="flex flex-col gap-4">
               <strong className="text-[14px] font-semibold text-white mb-2">Legal & Resources</strong>
               <a href="/privacy" className="text-white/75 text-[13px] hover:text-white transition-colors">Privacy Policy</a>

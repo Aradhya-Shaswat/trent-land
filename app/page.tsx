@@ -40,7 +40,10 @@ export default function Home() {
       "url": "https://trentarev.com",
       "logo": "https://trentarev.com/brand/logo.png",
       "sameAs": [
-        "https://twitter.com/trentarev"
+        "https://twitter.com/trentarev",
+        "https://youtube.com/@trentarev",
+        "https://linkedin.com/company/trentarev",
+        "https://instagram.com/trytrentarev"
       ],
       "founder": [
         {
@@ -52,6 +55,54 @@ export default function Home() {
           "@type": "Person",
           "name": "Aradhya Shaswat",
           "jobTitle": "Co-Founder"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Trentarev",
+      "url": "https://trentarev.com"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SiteNavigationElement",
+      "name": "Main Navigation",
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "Capabilities",
+          "url": "https://trentarev.com/#capabilities"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Labs",
+          "url": "https://trentarev.com/#labs"
+        },
+        {
+          "@type": "WebPage",
+          "name": "CLI",
+          "url": "https://trentarev.com/#cli"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Pricing",
+          "url": "https://trentarev.com/pricing"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Resources",
+          "url": "https://trentarev.com/resources"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Documentation",
+          "url": "https://trentarev.com/docs"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Download",
+          "url": "https://trentarev.com/#download"
         }
       ]
     }

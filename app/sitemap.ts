@@ -10,15 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
     },
-    // Top-Level Sitelinks (Promoted content to appear in Google search results)
+    // Top-Level Sitelinks — /pricing 301-redirects to /#pricing via next.config.js
+    // Google ignores fragment (#) URLs in sitemaps, so we use real paths instead
     {
-      url: 'https://trentarev.com/#pricing',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://trentarev.com/#features',
+      url: 'https://trentarev.com/pricing',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
